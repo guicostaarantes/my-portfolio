@@ -42,6 +42,9 @@ function Header() {
               <Button size="large" variant="contained" className={style.button}>
                 Direto ao assunto
               </Button>
+              <Button size="large" variant="contained" className={style.button}>
+                English, please
+              </Button>
             </Grid>
           </Grid>
           <Grid item xs={12} md={4} className={style.containerItem}>
