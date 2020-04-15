@@ -11,18 +11,14 @@ function Header() {
 
   const greeting = () => {
     const time = new Date();
-    switch (Math.ceil(time.getHours() / 6.0)) {
-      case 1:
-        return "Bom dia!";
-      case 2:
-        return "Bom dia!";
-      case 3:
-        return "Boa tarde!";
-      case 4:
-        return "Boa noite!";
-      default:
-        return "Olá!";
+    const hour = Math.floor(time.getHours());
+    if (hour >= 5 && hour < 12) {
+      return "Bom dia!";
     }
+    if (hour >= 12 && hour < 18) {
+      return "Boa tarde!";
+    }
+    return "Boa noite!";
   };
 
   return (
