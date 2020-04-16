@@ -27,7 +27,11 @@ function AboutMe() {
       <Container className={style.container}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6} className={style.containerItem}>
-            <Typography variant="h2" className={style.text}>
+            <Typography
+              variant="h2"
+              className={style.text}
+              style={{ marginBottom: "0.2em" }}
+            >
               Sobre mim
             </Typography>
             <Typography variant="h5" className={style.text}>
@@ -44,7 +48,12 @@ function AboutMe() {
             </Typography>
           </Grid>
           <Grid item xs={12} md={6} className={style.containerItem}>
-            <Code language="json" style={vs2015} showLineNumbers={true}>
+            <Code
+              language="json"
+              style={vs2015}
+              showLineNumbers={true}
+              className={style.code}
+            >
               {beautify(
                 { ...cv, age: yearsPastSince(new Date("1994-06-25")) },
                 null,

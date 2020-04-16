@@ -18,8 +18,11 @@ export default makeStyles({
     color: "#ffffff",
     fontWeight: 300,
   },
-  button: {
-    marginTop: 20,
-    marginRight: 20,
+  code: {
+    background: "transparent ! important",
+    fontSize: 14,
+    "& .react-syntax-highlighter-line-number": {
+      color: "#777",
+    },
   },
 });

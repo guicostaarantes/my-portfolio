@@ -1,11 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-import wave2 from "../assets/wave2.svg";
+import wave1 from "../assets/wave1.svg";
 
 export default makeStyles({
   root: {
     minHeight: "100vh",
-    background: `bottom center url(${wave2})`,
+    background: `bottom center url(${wave1})`,
     backgroundSize: "cover",
     padding: "1em",
   },
