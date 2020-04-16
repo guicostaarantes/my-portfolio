@@ -1,0 +1,65 @@
+{
+  "name": "Guilherme Costa Arantes",
+  "age": 25,
+  "email": "arantes.g@outlook.com",
+  "career": [
+    {
+      "company": "Sigga Workforce Technologies",
+      "website": "https://www.sigga.com",
+      "position": "Consultor de TI",
+      "startDate": "2018-02",
+      "endDate": null
+    },
+    {
+      "company": "MLP Computadores",
+      "website": "https://mlp.garantes.me",
+      "position": "Desenvolvedor Full-stack",
+      "startDate": "2016-02",
+      "endDate": "2017-10"
+    },
+    {
+      "company": "Sopre",
+      "website": "https://www.sopre.eng.br",
+      "position": "Desenvolvedor Full-stack",
+      "startDate": "2013-03",
+      "endDate": "2014-11"
+    }
+  ],
+  "education": [
+    {
+      "school": "RocketSeat",
+      "country": "Brasil",
+      "degree": "Bootcamp NodeJS / ReactJS / React Native",
+      "startDate": "2020-03",
+      "endDate": null
+    },
+    {
+      "school": "Universidade Federal de Minas Gerais",
+      "country": "Brasil",
+      "degree": "Bacharelado em Engenharia Mecânica",
+      "startDate": "2012-02",
+      "endDate": "2017-12"
+    },
+    {
+      "school": "The University Of Queensland",
+      "country": "Australia",
+      "degree": "Mechanical Engineering Non-Award Program",
+      "startDate": "2015-02",
+      "endDate": "2015-11"
+    }
+  ],
+  "skills": {
+    "english": 95,
+    "node": 90,
+    "react": 90,
+    "typescript": 90,
+    "tdd": 80,
+    "git": 80,
+    "terminal": 80,
+    "postgres": 80,
+    "react-native": 75,
+    "kotlin": 70,
+    "python": 70,
+    "php": 70
+  }
+}

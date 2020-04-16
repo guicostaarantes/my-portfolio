@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "../components/header";
+import AboutMe from "../components/aboutme";
 
 function Home() {
   return (
     <div>
       <Header />
-      <section style={{ height: 1000 }} />
+      <AboutMe />
     </div>
   );
 }
