@@ -13,6 +13,7 @@
    width="500"
    height="500"
    viewBox="0 0 500 500"
+   preserveAspectRatio="none"
    version="1.1"
    id="svg176"
    sodipodi:docname="wave2.svg"
@@ -151,14 +152,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="230.25701"
-     inkscape:cy="220.99638"
+     inkscape:cx="238.26995"
+     inkscape:cy="199.00459"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      units="px"
      inkscape:window-width="2560"
-     inkscape:window-height="1346"
+     inkscape:window-height="1406"
      inkscape:window-x="-11"
      inkscape:window-y="-11"
      inkscape:window-maximized="1">
@@ -186,10 +187,10 @@
      id="layer1"
      transform="translate(0,-532.41665)">
     <path
-       sodipodi:nodetypes="cscccc"
+       sodipodi:nodetypes="csccccc"
        inkscape:connector-curvature="0"
        id="path3793"
-       d="m 0,1007.4167 c 110,-45.00015 146.01014,4.4923 256.01014,4.4923 C 353.09258,1011.9089 375,967.41665 500,992.41665 v -460 H 0 Z"
+       d="m 0,1007.4167 c 110,-45.00015 146.01014,4.4923 256.01014,4.4923 C 353.09258,1011.9089 375,967.41665 500,992.41665 v -425 c -109.65492,28.52919 -217.8131,24.74814 -325,0 -65,-15 -118.804652,-22.22575 -175,0 z"
        style="display:inline;fill:url(#linearGradient188);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.00985221;filter:url(#filter3889)" />
   </g>
 </svg>

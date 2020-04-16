@@ -1,13 +1,17 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-import wave1 from "../assets/wave1.svg";
-
 export default makeStyles({
   root: {
     minHeight: "100vh",
-    background: `bottom center url(${wave1})`,
-    backgroundSize: "cover",
-    padding: "1em",
+    position: "relative",
+  },
+  background: {
+    position: "absolute",
+    zIndex: -999,
+    width: "100vw",
+    maxWidth: "100%",
+    height: "100%",
+    userSelect: "none",
   },
   container: {
     minHeight: "88vh",

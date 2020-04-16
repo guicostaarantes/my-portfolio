@@ -4,6 +4,7 @@ import { Grid, Typography, Container, Button } from "@material-ui/core";
 
 import useHeaderStyles from "../styles/header";
 
+import wave1 from "../assets/wave1.svg";
 import face from "../assets/face.png";
 
 function Header() {
@@ -23,6 +24,7 @@ function Header() {
 
   return (
     <div className={style.root}>
+      <img src={wave1} alt="background" className={style.background} />
       <Container className={style.container}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={8} className={style.containerItem}>

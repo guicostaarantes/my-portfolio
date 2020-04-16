@@ -28,20 +28,21 @@ function AboutMe() {
         <Grid container spacing={2}>
           <Grid item xs={12} md={6} className={style.containerItem}>
             <Typography
-              variant="h2"
+              variant="h3"
               className={style.text}
               style={{ marginBottom: "0.2em" }}
             >
               Sobre mim
             </Typography>
-            <Typography variant="h5" className={style.text}>
+            <Typography variant="h6" className={style.text}>
               Sou de Belo Horizonte/MG e tenho{" "}
               {yearsPastSince(new Date("1994-06-25"))} anos. Sou apaixonado por
               tecnologia da informação, somando{" "}
               {yearsPastSince(new Date("2013-03-01"))} anos de experiência entre
-              empregos, estágios e empreendedorismo.
+              empregos, estágios, empreendedorismo, matérias cursadas e
+              stackoverflow.
             </Typography>
-            <Typography variant="h5" className={style.text}>
+            <Typography variant="h6" className={style.text}>
               Hoje a stack com a qual aprendo e desenvolvo é NodeJS, ReactJS e
               React Native. Mas não fujo de desafios e já desenvolvi projetos
               pessoais em PHP, Python, Java e Kotlin.

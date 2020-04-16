@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles({
   root: {
     minHeight: "100vh",
-    padding: "1em",
   },
   container: {
     minHeight: "100vh",
@@ -19,10 +18,18 @@ export default makeStyles({
     fontWeight: 300,
   },
   code: {
-    background: "transparent ! important",
+    height: "80vh",
     fontSize: 14,
+    "&::-webkit-scrollbar": {
+      width: 8,
+    },
+    "&::-webkit-scrollbar-thumb": {
+      borderRadius: 4,
+      background: "#509bf3",
+    },
     "& .react-syntax-highlighter-line-number": {
       color: "#777",
+      userSelect: "none",
     },
   },
 });
