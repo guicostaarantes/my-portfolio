@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useTranslation } from "react-i18next";
+
 import {
   Grid,
   Typography,
@@ -15,6 +17,8 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import useHeaderStyles from "../styles/contact";
 
 function Header() {
+  const { t, i18n } = useTranslation();
+
   const style = useHeaderStyles();
 
   return (

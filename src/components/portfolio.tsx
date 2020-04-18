@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import { useTranslation } from "react-i18next";
 
 import { Grid, Typography, Container, IconButton } from "@material-ui/core";
 
@@ -17,12 +19,23 @@ import YouTube from "react-youtube";
 
 import useHeaderStyles from "../styles/portfolio";
 
-import projects from "../assets/projects.json";
+import projectJson from "../assets/projects.json";
 
 import wave2 from "../assets/wave2.svg";
+import { Language } from "../i18n";
 
 function Portfolio() {
+  const { t, i18n } = useTranslation();
+
+  const [projects, setProjects] = useState(
+    projectJson[i18n.language as Language]
+  );
+
   const style = useHeaderStyles();
+
+  useEffect(() => {
+    setProjects(projectJson[i18n.language as Language]);
+  }, [i18n.language]);
 
   return (
     <div className={style.root}>
@@ -37,7 +50,7 @@ function Portfolio() {
           <Grid container spacing={2}>
             <Grid item xs={12} md={4} className={style.containerItem}>
               <Typography variant="h3" className={style.text}>
-                Projetos
+                {t("projects:title")}
               </Typography>
               <Slider style={{ margin: "20px 0" }}>
                 {projects.map((project) => (

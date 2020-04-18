@@ -19,4 +19,9 @@ i18n
     fallbackLng: ["en-US", "pt-BR"],
   });
 
+export enum Language {
+  "en-US" = "en-US",
+  "pt-BR" = "pt-BR",
+}
+
 export default i18n;

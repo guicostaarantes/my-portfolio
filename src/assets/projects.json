@@ -1,17 +1,36 @@
-[
-  {
-    "title": "MLP Computadores",
-    "desc": "Projeto pessoal de e-commerce de componentes de computadores.",
-    "video": "9uyyOHIidMA"
-  },
-  {
-    "title": "Quatro Por Quatro",
-    "desc": "Portfolio para escritório de arquitetura e design.",
-    "video": "9uyyOHIidMA"
-  },
-  {
-    "title": "Be The Hero",
-    "desc": "Aplicações web e mobile desenvolvidas no curso Semana OmniStack 11 da RocketSeat.",
-    "video": "9uyyOHIidMA"
-  }
-]
+{
+  "en-US": [
+    {
+      "title": "MLP Computers",
+      "desc": "Personal project of a computer store e-commerce website.",
+      "video": "9uyyOHIidMA"
+    },
+    {
+      "title": "Quatro Por Quatro",
+      "desc": "Portfolio for an architecture and home design office.",
+      "video": "9uyyOHIidMA"
+    },
+    {
+      "title": "Be The Hero",
+      "desc": "Web and mobile applications developed during the OmniStack 11 course by RocketSeat.",
+      "video": "9uyyOHIidMA"
+    }
+  ],
+  "pt-BR": [
+    {
+      "title": "MLP Computadores",
+      "desc": "Projeto pessoal de e-commerce de componentes de computadores.",
+      "video": "9uyyOHIidMA"
+    },
+    {
+      "title": "Quatro Por Quatro",
+      "desc": "Portfolio para escritório de arquitetura e design.",
+      "video": "9uyyOHIidMA"
+    },
+    {
+      "title": "Be The Hero",
+      "desc": "Aplicações web e mobile desenvolvidas no curso OmniStack 11 da RocketSeat.",
+      "video": "9uyyOHIidMA"
+    }
+  ]
+}
