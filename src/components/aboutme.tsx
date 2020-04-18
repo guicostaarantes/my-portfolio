@@ -39,8 +39,8 @@ function AboutMe() {
               {yearsPastSince(new Date("1994-06-25"))} anos. Sou apaixonado por
               tecnologia da informação, somando{" "}
               {yearsPastSince(new Date("2013-03-01"))} anos de experiência entre
-              empregos, estágios, empreendedorismo, matérias cursadas e
-              stackoverflow.
+              empregos, estágios, empreendedorismo, disciplinas cursadas, cursos
+              a distância e stackoverflow.
             </Typography>
             <Typography variant="h6" className={style.text}>
               Hoje a stack com a qual aprendo e desenvolvo é NodeJS, ReactJS e
