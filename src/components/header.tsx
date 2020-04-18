@@ -11,6 +11,7 @@ import face from "../assets/face.png";
 
 function Header() {
   const { t, i18n } = useTranslation();
+
   const style = useHeaderStyles();
 
   const greeting = () => {

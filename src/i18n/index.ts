@@ -10,7 +10,7 @@ i18n
   .use(initReactI18next)
   .init({
     debug: false,
-    ns: ["common, header"],
+    ns: ["common", "aboutme", "header"],
     defaultNS: "common",
     resources: {
       "en-US": enUS,

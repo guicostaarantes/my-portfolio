@@ -1,0 +1,5 @@
+{
+  "title": "About me",
+  "text1": "I'm  a {{born}} year-old from Belo Horizonte, MG, Brazil. I'm passionate by software, with over {{started}} years of experience amongst jobs, internships, enterpreneurship, courses and stackoverflow.",
+  "text2": "Currently the stack I use to learn and develop is NodeJS, ReactJS and React Native. However I don't run from challenges and have also used PHP, Python, Java and Kotlin to develop personal projects."
+}

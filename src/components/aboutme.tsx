@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useTranslation } from "react-i18next";
+
 import { Grid, Typography, Container } from "@material-ui/core";
 
 import { Light as Code } from "react-syntax-highlighter";
@@ -14,6 +16,8 @@ import useAboutMeStyles from "../styles/aboutme";
 Code.registerLanguage("json", json);
 
 function AboutMe() {
+  const { t } = useTranslation();
+
   const style = useAboutMeStyles();
 
   const yearsPastSince = (birthday: Date) => {
@@ -32,20 +36,16 @@ function AboutMe() {
               className={style.text}
               style={{ marginBottom: "0.2em" }}
             >
-              Sobre mim
+              {t("aboutme:title")}
             </Typography>
             <Typography variant="h6" className={style.text}>
-              Sou de Belo Horizonte/MG e tenho{" "}
-              {yearsPastSince(new Date("1994-06-25"))} anos. Sou apaixonado por
-              tecnologia da informação, somando{" "}
-              {yearsPastSince(new Date("2013-03-01"))} anos de experiência entre
-              empregos, estágios, empreendedorismo, disciplinas cursadas, cursos
-              a distância e stackoverflow.
+              {t("aboutme:text1", {
+                born: yearsPastSince(new Date("1994-06-25")),
+                started: yearsPastSince(new Date("2013-03-01")),
+              })}
             </Typography>
             <Typography variant="h6" className={style.text}>
-              Hoje a stack com a qual aprendo e desenvolvo é NodeJS, ReactJS e
-              React Native. Mas não fujo de desafios e já desenvolvi projetos
-              pessoais em PHP, Python, Java e Kotlin.
+              {t("aboutme:text2")}
             </Typography>
           </Grid>
           <Grid item xs={12} md={6} className={style.containerItem}>

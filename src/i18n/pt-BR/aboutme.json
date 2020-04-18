@@ -1,0 +1,5 @@
+{
+  "title": "Sobre mim",
+  "text1": "Sou de Belo Horizonte/MG e tenho {{born}} anos. Sou apaixonado por tecnologia da informação, somando {{started}} anos de experiência entre empregos, estágios, empreendedorismo, disciplinas cursadas, cursos a distância e stackoverflow.",
+  "text2": "Hoje a stack com a qual aprendo e desenvolvo é NodeJS, ReactJS e React Native. Mas não fujo de desafios e já desenvolvi projetos pessoais em PHP, Python, Java e Kotlin."
+}
