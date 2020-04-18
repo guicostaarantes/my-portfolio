@@ -17,7 +17,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import useHeaderStyles from "../styles/contact";
 
 function Header() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const style = useHeaderStyles();
 
@@ -27,7 +27,7 @@ function Header() {
         <Grid container spacing={2}>
           <Grid item xs={12} md={4} className={style.containerItem}>
             <Typography variant="h2" className={style.text}>
-              Links e Contato
+              {t("contact:title")}
             </Typography>
             <Button
               size="large"
@@ -35,7 +35,7 @@ function Header() {
               className={style.button}
               startIcon={<FontAwesomeIcon icon={faGithub} />}
             >
-              Github
+              {t("contact:github")}
             </Button>
             <Button
               size="large"
@@ -43,7 +43,7 @@ function Header() {
               className={style.button}
               startIcon={<FontAwesomeIcon icon={faLinkedin} />}
             >
-              Linkedin
+              {t("contact:linkedin")}
             </Button>
             <Button
               size="large"
@@ -51,25 +51,25 @@ function Header() {
               className={style.button}
               startIcon={<FontAwesomeIcon icon={faEnvelope} />}
             >
-              Email
+              {t("contact:mail")}
             </Button>
           </Grid>
           <Grid item xs={12} md={8} className={style.containerItem}>
             <TextField
               variant="outlined"
-              label="Seu nome"
+              label={t("contact:your_name")}
               className={style.input}
             />
             <TextField
               variant="outlined"
-              label="Seu contato para eu te retornar"
+              label={t("contact:your_contact")}
               className={style.input}
             />
             <TextField
               variant="outlined"
               multiline={true}
               rows={8}
-              label="Mensagem"
+              label={t("contact:message")}
               className={style.input}
             />
             <Button
@@ -77,7 +77,7 @@ function Header() {
               variant="contained"
               startIcon={<FontAwesomeIcon icon={faPaperPlane} />}
             >
-              Enviar
+              {t("contact:send")}
             </Button>
           </Grid>
         </Grid>
