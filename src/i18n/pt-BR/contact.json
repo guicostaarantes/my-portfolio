@@ -6,5 +6,6 @@
   "your_name": "Seu nome",
   "your_contact": "Um email para eu retornar seu contato",
   "message": "Mensagem",
-  "send": "Enviar"
+  "send": "Enviar",
+  "end": "Desenvolvido com ❤ em Javascript por Guilherme Costa Arantes (eu)"
 }

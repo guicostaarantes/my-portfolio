@@ -58,4 +58,8 @@ export default makeStyles({
       },
     },
   },
+  end: {
+    display: "flex",
+    justifyContent: "center",
+  },
 });

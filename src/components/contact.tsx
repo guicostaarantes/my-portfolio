@@ -81,6 +81,9 @@ function Header() {
             </Button>
           </Grid>
         </Grid>
+        <Grid className={style.end}>
+          <Typography className={style.text}>{t("contact:end")}</Typography>
+        </Grid>
       </Container>
     </div>
   );
