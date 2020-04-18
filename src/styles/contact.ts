@@ -13,14 +13,13 @@ export default makeStyles({
     height: "100%",
     userSelect: "none",
   },
-  container: {
+  containerGrid: {
     minHeight: "88vh",
   },
   containerItem: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    minHeight: "88vh",
   },
   text: {
     color: "#ffffff",

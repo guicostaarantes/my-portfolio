@@ -23,8 +23,8 @@ function Header() {
 
   return (
     <div className={style.root}>
-      <Container className={style.container}>
-        <Grid container spacing={2}>
+      <Container>
+        <Grid container spacing={2} className={style.containerGrid}>
           <Grid item xs={12} md={4} className={style.containerItem}>
             <Typography variant="h2" className={style.text}>
               {t("contact:title")}

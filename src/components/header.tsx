@@ -29,8 +29,8 @@ function Header() {
   return (
     <div className={style.root}>
       <img src={wave1} alt="background" className={style.background} />
-      <Container className={style.container}>
-        <Grid container spacing={2}>
+      <Container>
+        <Grid container spacing={2} className={style.containerGrid}>
           <Grid item xs={12} md={8} className={style.containerItem}>
             <Typography variant="h2" className={style.text}>
               {t(greeting())}

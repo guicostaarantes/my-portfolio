@@ -4,14 +4,13 @@ export default makeStyles({
   root: {
     minHeight: "100vh",
   },
-  container: {
+  containerGrid: {
     minHeight: "100vh",
   },
   containerItem: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    minHeight: "100vh",
   },
   text: {
     color: "#ffffff",

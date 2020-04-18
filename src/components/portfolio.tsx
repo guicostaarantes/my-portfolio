@@ -40,14 +40,14 @@ function Portfolio() {
   return (
     <div className={style.root}>
       <img src={wave2} alt="background" className={style.background} />
-      <Container className={style.container}>
+      <Container>
         <CarouselProvider
           naturalSlideWidth={15}
           naturalSlideHeight={9}
           totalSlides={3}
           infinite={true}
         >
-          <Grid container spacing={2}>
+          <Grid container spacing={2} className={style.containerGrid}>
             <Grid item xs={12} md={4} className={style.containerItem}>
               <Typography variant="h3" className={style.text}>
                 {t("projects:title")}
