@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useTranslation } from "react-i18next";
+
 import { Grid, Typography, Container, Button } from "@material-ui/core";
 
 import useHeaderStyles from "../styles/header";
@@ -8,18 +10,19 @@ import wave1 from "../assets/wave1.svg";
 import face from "../assets/face.png";
 
 function Header() {
+  const { t, i18n } = useTranslation();
   const style = useHeaderStyles();
 
   const greeting = () => {
     const time = new Date();
     const hour = Math.floor(time.getHours());
     if (hour >= 5 && hour < 12) {
-      return "Bom dia!";
+      return "header:good_morning";
     }
     if (hour >= 12 && hour < 18) {
-      return "Boa tarde!";
+      return "header:good_afternoon";
     }
-    return "Boa noite!";
+    return "header:good_evening";
   };
 
   return (
@@ -29,24 +32,33 @@ function Header() {
         <Grid container spacing={2}>
           <Grid item xs={12} md={8} className={style.containerItem}>
             <Typography variant="h2" className={style.text}>
-              {greeting()}
+              {t(greeting())}
             </Typography>
             <Typography variant="h4" className={style.text}>
-              Eu sou o Guilherme e eu desenvolvo software.
+              {t("header:hello1")}
             </Typography>
             <Typography variant="h4" className={style.text}>
-              Esse é o meu portfolio.
+              {t("header:hello2")}
             </Typography>
             <Grid>
               <Button size="large" variant="contained" className={style.button}>
-                Quero ver
+                {t("header:show_me")}
               </Button>
               <Button size="large" variant="contained" className={style.button}>
-                Direto ao assunto
+                {t("header:straight_to_the_point")}
               </Button>
-              <Button size="large" variant="contained" className={style.button}>
-                English, please
-              </Button>
+              {i18n.languages
+                .filter((lng) => lng.length === 5 && lng !== i18n.language)
+                .map((lng) => (
+                  <Button
+                    size="large"
+                    variant="contained"
+                    className={style.button}
+                    onClick={() => i18n.changeLanguage(lng)}
+                  >
+                    {t(`header:switch_to`, { lng })}
+                  </Button>
+                ))}
             </Grid>
           </Grid>
           <Grid item xs={12} md={4} className={style.containerItem}>
