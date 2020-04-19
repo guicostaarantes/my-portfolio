@@ -28,35 +28,6 @@ export default makeStyles({
   button: {
     marginTop: 20,
   },
-  input: {
-    marginBottom: 10,
-    "& label.Mui-focused": {
-      // label when something is written
-      color: "#539bf2",
-    },
-    "& > div": {
-      // text
-      color: "white",
-    },
-    "& > label": {
-      // label when nothing is written
-      color: "white",
-    },
-    "& .MuiOutlinedInput-root": {
-      // border normal
-      "& fieldset": {
-        borderColor: "#bbb",
-      },
-      "&:hover fieldset": {
-        // border when hovered
-        borderColor: "white",
-      },
-      "&.Mui-focused fieldset": {
-        // border selected
-        borderColor: "#539bf2",
-      },
-    },
-  },
   end: {
     display: "flex",
     justifyContent: "center",

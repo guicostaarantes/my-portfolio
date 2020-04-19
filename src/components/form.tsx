@@ -2,9 +2,12 @@ import React, { useState } from "react";
 
 import { useTranslation } from "react-i18next";
 
-import { TextField, Button } from "@material-ui/core";
+import { TextField, Button, Snackbar } from "@material-ui/core";
+import { Alert } from "@material-ui/lab";
 
-import useContactStyles from "../styles/contact";
+import Recaptcha from "react-google-recaptcha";
+
+import useContactFormStyles from "../styles/contactForm";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
@@ -15,11 +18,13 @@ import config from "../config.json";
 function ContactForm() {
   const { t } = useTranslation();
 
-  const style = useContactStyles();
+  const style = useContactFormStyles();
 
   const [formName, setFormName] = useState("");
   const [formMail, setFormMail] = useState("");
   const [formMsg, setFormMsg] = useState("");
+  const [recaptcha, setRecaptcha] = useState("");
+  const [recaptchaRef, setRecaptchaRef] = useState<Recaptcha | null>(null);
 
   async function sendMessage() {
     try {
@@ -27,14 +32,13 @@ function ContactForm() {
         formName,
         formMail,
         formMsg,
+        recaptcha,
       });
       setFormName("");
       setFormMail("");
       setFormMsg("");
-      console.log("Sucesso");
-    } catch (err) {
-      console.log("Erro");
-    }
+    } catch (err) {}
+    recaptchaRef?.reset();
   }
 
   return (
@@ -62,6 +66,16 @@ function ContactForm() {
         value={formMsg}
         onChange={(e) => setFormMsg(e.target.value)}
       />
+      <div className={style.recaptcha}>
+        <Recaptcha
+          type="image"
+          sitekey={config.recaptcha_v2_key}
+          ref={(e) => setRecaptchaRef(e)}
+          onChange={(e) => (e !== null ? setRecaptcha(e) : false)}
+          onExpired={() => setRecaptcha("")}
+          onErrored={() => setRecaptcha("")}
+        />
+      </div>
       <Button
         size="large"
         variant="contained"

@@ -9,12 +9,18 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/sendMessage", async (req, res) => {
-  const { formName, formMail, formMsg } = req.body;
-
+  const { formName, formMail, formMsg, recaptcha } = req.body;
   const chat_id = config.telegram_chat_id;
   const text = `Nova mensagem a partir do form do portfolio:\nNome: ${formName}\nEmail: ${formMail}\nMensagem: ${formMsg}`;
 
   try {
+    const response = await axios.post(
+      `https://www.google.com/recaptcha/api/siteverify?secret=${config.recaptcha_secret_key}&response=${recaptcha}`
+    );
+    if (!response.data.success) {
+      console.log(response);
+      throw Error();
+    }
     await axios.post(
       `https://api.telegram.org/bot${config.telegram_api_key}/sendMessage`,
       { chat_id, text }
