@@ -33,6 +33,8 @@ function Header() {
               size="large"
               variant="contained"
               className={style.button}
+              href="https://github.com/guicostaarantes"
+              target="blank"
               startIcon={<FontAwesomeIcon icon={faGithub} />}
             >
               {t("contact:github")}
@@ -41,6 +43,8 @@ function Header() {
               size="large"
               variant="contained"
               className={style.button}
+              href="https://www.linkedin.com/in/guilherme-arantes-07b261132/"
+              target="blank"
               startIcon={<FontAwesomeIcon icon={faLinkedin} />}
             >
               {t("contact:linkedin")}
@@ -49,6 +53,8 @@ function Header() {
               size="large"
               variant="contained"
               className={style.button}
+              href="mailto:arantes.g@outlook.com"
+              target="blank"
               startIcon={<FontAwesomeIcon icon={faEnvelope} />}
             >
               {t("contact:mail")}
