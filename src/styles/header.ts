@@ -28,5 +28,6 @@ export default makeStyles({
   button: {
     marginTop: 20,
     marginRight: 20,
+    verticalAlign: "middle",
   },
 });

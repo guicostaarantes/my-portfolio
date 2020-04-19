@@ -2,12 +2,20 @@ import React from "react";
 
 import { useTranslation } from "react-i18next";
 
-import { Grid, Typography, Container, Button } from "@material-ui/core";
+import {
+  Grid,
+  Typography,
+  Container,
+  Button,
+  ButtonGroup,
+} from "@material-ui/core";
 
 import useHeaderStyles from "../styles/header";
 
 import wave1 from "../assets/wave1.svg";
 import face from "../assets/face.png";
+
+import ReactCountryFlag from "react-country-flag";
 
 function Header() {
   const { t, i18n } = useTranslation();
@@ -26,6 +34,15 @@ function Header() {
     return "header:good_evening";
   };
 
+  function handleChangeLanguage(
+    event: React.MouseEvent<HTMLElement>,
+    lng: string | null
+  ) {
+    if (lng !== null) {
+      i18n.changeLanguage(lng);
+    }
+  }
+
   return (
     <div className={style.root}>
       <img src={wave1} alt="background" className={style.background} />
@@ -43,23 +60,31 @@ function Header() {
             </Typography>
             <Grid>
               <Button size="large" variant="contained" className={style.button}>
+                {t("header:who")}
+              </Button>
+              <Button size="large" variant="contained" className={style.button}>
                 {t("header:show_me")}
               </Button>
               <Button size="large" variant="contained" className={style.button}>
                 {t("header:straight_to_the_point")}
               </Button>
-              {i18n.languages
-                .filter((lng) => lng.length === 5 && lng !== i18n.language)
-                .map((lng) => (
-                  <Button
-                    size="large"
-                    variant="contained"
-                    className={style.button}
-                    onClick={() => i18n.changeLanguage(lng)}
-                  >
-                    {t(`header:switch_to`, { lng })}
-                  </Button>
-                ))}
+              <ButtonGroup variant="contained" className={style.button}>
+                {i18n.languages
+                  .filter((lng) => lng.length === 5)
+                  .sort((a, b) => (a < b ? 1 : -1))
+                  .map((lng) => (
+                    <Button
+                      disabled={lng === i18n.language}
+                      onClick={() => i18n.changeLanguage(lng)}
+                    >
+                      <ReactCountryFlag
+                        svg
+                        countryCode={lng.slice(3)}
+                        style={{ fontSize: 30 }}
+                      />
+                    </Button>
+                  ))}
+              </ButtonGroup>
             </Grid>
           </Grid>
           <Grid item xs={12} md={4} className={style.containerItem}>
