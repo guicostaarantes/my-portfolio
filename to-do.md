@@ -1,6 +1,5 @@
 1. Must have
 
-- Make contact form deliver in telegram chat bot
 - Make header buttons scroll
 - Make videos for projects
 

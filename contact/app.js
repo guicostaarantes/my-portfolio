@@ -18,7 +18,6 @@ app.post("/sendMessage", async (req, res) => {
       `https://www.google.com/recaptcha/api/siteverify?secret=${config.recaptcha_secret_key}&response=${recaptcha}`
     );
     if (!response.data.success) {
-      console.log(response);
       throw Error();
     }
     await axios.post(

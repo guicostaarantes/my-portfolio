@@ -10,9 +10,9 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import useContactStyles from "../styles/contact";
 
-import ContactForm from "./form";
+import ContactForm from "./contactForm";
 
-function Header() {
+function Contact() {
   const { t } = useTranslation();
 
   const style = useContactStyles();
@@ -68,4 +68,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Contact;

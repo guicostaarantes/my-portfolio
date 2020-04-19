@@ -7,5 +7,9 @@
   "your_contact": "An email address so I can reach back to you",
   "message": "Message",
   "send": "Send",
-  "end": "Coded with ❤ in Javascript by Guilherme Costa Arantes (me)"
+  "end": "Coded with ❤ in Javascript by Guilherme Costa Arantes (me)",
+  "successMessage": "Your message was submitted =)",
+  "missingInput": "Do not forget to fill name, email and message =)",
+  "robotInput": "Are you a robot?",
+  "serverErrorMessage": "Your message could not be delivered due to server problems. Please try making the contact by Linkedin or Mail. Sorry for the inconvenience =/"
 }

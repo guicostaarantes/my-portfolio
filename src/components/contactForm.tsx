@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import { withSnackbar, WithSnackbarProps } from "notistack";
 
 import { useTranslation } from "react-i18next";
 
-import { TextField, Button, Snackbar } from "@material-ui/core";
-import { Alert } from "@material-ui/lab";
+import { TextField, Button } from "@material-ui/core";
 
 import Recaptcha from "react-google-recaptcha";
 
@@ -15,8 +15,9 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import config from "../config.json";
 
-function ContactForm() {
-  const { t } = useTranslation();
+function ContactForm(props: WithSnackbarProps) {
+  const { enqueueSnackbar } = props;
+  const { t, i18n } = useTranslation();
 
   const style = useContactFormStyles();
 
@@ -27,6 +28,14 @@ function ContactForm() {
   const [recaptchaRef, setRecaptchaRef] = useState<Recaptcha | null>(null);
 
   async function sendMessage() {
+    if (!formName.length || !formMail.length || !formMsg.length) {
+      enqueueSnackbar(t("contact:missingInput"), { variant: "error" });
+      return;
+    }
+    if (!recaptcha) {
+      enqueueSnackbar(t("contact:robotInput"), { variant: "error" });
+      return;
+    }
     try {
       await axios.post(config.contact, {
         formName,
@@ -37,7 +46,10 @@ function ContactForm() {
       setFormName("");
       setFormMail("");
       setFormMsg("");
-    } catch (err) {}
+      enqueueSnackbar(t("contact:successMessage"), { variant: "success" });
+    } catch (err) {
+      enqueueSnackbar(t("contact:serverErrorMessage"), { variant: "error" });
+    }
     recaptchaRef?.reset();
   }
 
@@ -74,6 +86,8 @@ function ContactForm() {
           onChange={(e) => (e !== null ? setRecaptcha(e) : false)}
           onExpired={() => setRecaptcha("")}
           onErrored={() => setRecaptcha("")}
+          hl={i18n.language}
+          key={i18n.language}
         />
       </div>
       <Button
@@ -88,4 +102,4 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;
+export default withSnackbar(ContactForm);

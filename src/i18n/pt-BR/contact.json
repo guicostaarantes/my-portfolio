@@ -7,5 +7,9 @@
   "your_contact": "Um email para eu retornar seu contato",
   "message": "Mensagem",
   "send": "Enviar",
-  "end": "Desenvolvido com ❤ em Javascript por Guilherme Costa Arantes (eu)"
+  "end": "Desenvolvido com ❤ em Javascript por Guilherme Costa Arantes (eu)",
+  "successMessage": "Sua mensagem foi encaminhada com sucesso =)",
+  "missingInput": "Não se esqueça de preencher nome, contato e mensagem =)",
+  "robotInput": "Você é um robô?",
+  "serverErrorMessage": "Sua mensagem não foi enviada devido a um problema no servidor. Por favor tente fazer o contato por Linkedin ou Email. Desculpe pelo transtorno =/"
 }
