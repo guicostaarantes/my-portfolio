@@ -34,15 +34,6 @@ function Header() {
     return "header:good_evening";
   };
 
-  function handleChangeLanguage(
-    event: React.MouseEvent<HTMLElement>,
-    lng: string | null
-  ) {
-    if (lng !== null) {
-      i18n.changeLanguage(lng);
-    }
-  }
-
   return (
     <div className={style.root}>
       <img src={wave1} alt="background" className={style.background} />
