@@ -21,9 +21,11 @@ function AboutMe() {
   const style = useAboutMeStyles();
 
   const yearsPastSince = (birthday: Date) => {
-    const diff = Date.now() - birthday.getTime();
-    const ageDate = new Date(diff);
-    return Math.abs(ageDate.getUTCFullYear() - 1970);
+    const now = new Date();
+    const years = now.getFullYear() - birthday.getFullYear();
+    birthday.setFullYear(now.getFullYear());
+    const hasBirthdayPassed = birthday < now ? 0 : -1;
+    return years + hasBirthdayPassed;
   };
 
   return (
