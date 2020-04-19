@@ -17,7 +17,7 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 import YouTube from "react-youtube";
 
-import useHeaderStyles from "../styles/portfolio";
+import usePortfolioStyles from "../styles/portfolio";
 
 import projectJson from "../assets/projects.json";
 
@@ -31,7 +31,7 @@ function Portfolio() {
     projectJson[i18n.language as Language]
   );
 
-  const style = useHeaderStyles();
+  const style = usePortfolioStyles();
 
   useEffect(() => {
     setProjects(projectJson[i18n.language as Language]);

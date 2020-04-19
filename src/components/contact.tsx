@@ -14,12 +14,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-import useHeaderStyles from "../styles/contact";
+import useContactStyles from "../styles/contact";
 
 function Header() {
   const { t } = useTranslation();
 
-  const style = useHeaderStyles();
+  const style = useContactStyles();
 
   return (
     <div className={style.root}>
