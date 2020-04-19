@@ -2,19 +2,15 @@ import React from "react";
 
 import { useTranslation } from "react-i18next";
 
-import {
-  Grid,
-  Typography,
-  Container,
-  Button,
-  TextField,
-} from "@material-ui/core";
+import { Grid, Typography, Container, Button } from "@material-ui/core";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import useContactStyles from "../styles/contact";
+
+import ContactForm from "./form";
 
 function Header() {
   const { t } = useTranslation();
@@ -61,30 +57,7 @@ function Header() {
             </Button>
           </Grid>
           <Grid item xs={12} md={8} className={style.containerItem}>
-            <TextField
-              variant="outlined"
-              label={t("contact:your_name")}
-              className={style.input}
-            />
-            <TextField
-              variant="outlined"
-              label={t("contact:your_contact")}
-              className={style.input}
-            />
-            <TextField
-              variant="outlined"
-              multiline={true}
-              rows={8}
-              label={t("contact:message")}
-              className={style.input}
-            />
-            <Button
-              size="large"
-              variant="contained"
-              startIcon={<FontAwesomeIcon icon={faPaperPlane} />}
-            >
-              {t("contact:send")}
-            </Button>
+            <ContactForm />
           </Grid>
         </Grid>
         <Grid className={style.end}>
