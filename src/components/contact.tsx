@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import { Grid, Typography, Container, Button } from "@material-ui/core";
 
+import { Element } from "react-scroll";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -19,6 +21,7 @@ function Contact() {
 
   return (
     <div className={style.root}>
+      <Element name="contact" />
       <Container>
         <Grid container spacing={2} className={style.containerGrid}>
           <Grid item xs={12} md={4} className={style.containerItem}>

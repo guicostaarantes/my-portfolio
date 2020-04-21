@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import { Grid, Typography, Container, IconButton } from "@material-ui/core";
 
+import { Element } from "react-scroll";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -40,6 +42,7 @@ function Portfolio() {
   return (
     <div className={style.root}>
       <img src={wave2} alt="background" className={style.background} />
+      <Element name="portfolio" />
       <Container>
         <CarouselProvider
           naturalSlideWidth={15}

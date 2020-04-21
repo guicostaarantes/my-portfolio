@@ -22,6 +22,7 @@
     "react-google-recaptcha": "^2.0.1",
     "react-i18next": "^11.3.4",
     "react-scripts": "3.4.1",
+    "react-scroll": "^1.7.16",
     "react-syntax-highlighter": "^12.2.1",
     "react-youtube": "^7.11.1",
     "typescript": "~3.7.2"
@@ -55,6 +56,7 @@
     "@types/node": "^12.0.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-google-recaptcha": "^1.1.1",
+    "@types/react-scroll": "^1.5.4",
     "@types/react-syntax-highlighter": "^11.0.4"
   }
 }

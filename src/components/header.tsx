@@ -10,6 +10,8 @@ import {
   ButtonGroup,
 } from "@material-ui/core";
 
+import { Link } from "react-scroll";
+
 import useHeaderStyles from "../styles/header";
 
 import wave1 from "../assets/wave1.svg";
@@ -50,15 +52,33 @@ function Header() {
               {t("header:hello2")}
             </Typography>
             <Grid>
-              <Button size="large" variant="contained" className={style.button}>
-                {t("header:who")}
-              </Button>
-              <Button size="large" variant="contained" className={style.button}>
-                {t("header:show_me")}
-              </Button>
-              <Button size="large" variant="contained" className={style.button}>
-                {t("header:straight_to_the_point")}
-              </Button>
+              <Link to="aboutme" duration={800} smooth={true}>
+                <Button
+                  size="large"
+                  variant="contained"
+                  className={style.button}
+                >
+                  {t("header:who")}
+                </Button>
+              </Link>
+              <Link to="portfolio" duration={1200} smooth={true} offset={40}>
+                <Button
+                  size="large"
+                  variant="contained"
+                  className={style.button}
+                >
+                  {t("header:show_me")}
+                </Button>
+              </Link>
+              <Link to="contact" duration={1600} smooth={true}>
+                <Button
+                  size="large"
+                  variant="contained"
+                  className={style.button}
+                >
+                  {t("header:straight_to_the_point")}
+                </Button>
+              </Link>
               <ButtonGroup variant="contained" className={style.button}>
                 {i18n.languages
                   .filter((lng) => lng.length === 5)

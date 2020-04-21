@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import { Grid, Typography, Container } from "@material-ui/core";
 
+import { Element } from "react-scroll";
+
 import { Light as Code } from "react-syntax-highlighter";
 import json from "react-syntax-highlighter/dist/esm/languages/hljs/json";
 import vs2015 from "react-syntax-highlighter/dist/esm/styles/hljs/vs2015";
@@ -30,6 +32,7 @@ function AboutMe() {
 
   return (
     <div className={style.root}>
+      <Element name="aboutme" />
       <Container>
         <Grid container spacing={2} className={style.containerGrid}>
           <Grid item xs={12} md={6} className={style.containerItem}>
