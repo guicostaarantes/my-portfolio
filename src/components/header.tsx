@@ -67,6 +67,7 @@ function Header() {
                     <Button
                       disabled={lng === i18n.language}
                       onClick={() => i18n.changeLanguage(lng)}
+                      key={lng}
                     >
                       <ReactCountryFlag
                         svg

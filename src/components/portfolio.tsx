@@ -53,8 +53,8 @@ function Portfolio() {
                 {t("projects:title")}
               </Typography>
               <Slider style={{ margin: "20px 0" }}>
-                {projects.map((project) => (
-                  <Slide className={style.project} index={0}>
+                {projects.map((project, index) => (
+                  <Slide className={style.project} index={index} key={index}>
                     <Typography
                       variant="h4"
                       className={style.text}
@@ -86,8 +86,8 @@ function Portfolio() {
             </Grid>
             <Grid item xs={12} md={8} className={style.containerItem}>
               <Slider>
-                {projects.map((project) => (
-                  <Slide className={style.youtube} index={0}>
+                {projects.map((project, index) => (
+                  <Slide className={style.youtube} index={index} key={index}>
                     <YouTube videoId={project.video} />
                   </Slide>
                 ))}
