@@ -50,6 +50,7 @@ function ContactForm(props: WithSnackbarProps) {
     } catch (err) {
       enqueueSnackbar(t("contact:serverErrorMessage"), { variant: "error" });
     }
+    setRecaptcha("");
     recaptchaRef?.reset();
   }
 
