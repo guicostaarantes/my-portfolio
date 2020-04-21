@@ -12,17 +12,17 @@ import {
 
 import { Link } from "react-scroll";
 
-import useHeaderStyles from "../styles/header";
+import useStyles from "./styles";
 
-import wave1 from "../assets/wave1.svg";
-import face from "../assets/face.png";
+import wave1 from "../../assets/wave1.svg";
+import face from "../../assets/face.png";
 
 import ReactCountryFlag from "react-country-flag";
 
-function Header() {
+function Start() {
   const { t, i18n } = useTranslation();
 
-  const style = useHeaderStyles();
+  const style = useStyles();
 
   const greeting = () => {
     const time = new Date();
@@ -108,4 +108,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Start;

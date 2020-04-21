@@ -19,14 +19,14 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 import YouTube from "react-youtube";
 
-import usePortfolioStyles from "../styles/portfolio";
+import usePortfolioStyles from "./styles";
 
-import projectJson from "../assets/projects.json";
+import projectJson from "../../assets/projects.json";
 
-import wave2 from "../assets/wave2.svg";
-import { Language } from "../i18n";
+import wave2 from "../../assets/wave2.svg";
+import { Language } from "../../i18n";
 
-function Portfolio() {
+function Projects() {
   const { t, i18n } = useTranslation();
 
   const [projects, setProjects] = useState(
@@ -103,4 +103,4 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default Projects;

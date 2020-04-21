@@ -1,15 +1,15 @@
 import React from "react";
-import Header from "../components/header";
+import Start from "../components/start";
 import AboutMe from "../components/aboutme";
-import Portfolio from "../components/portfolio";
+import Projects from "../components/projects";
 import Contact from "../components/contact";
 
 function Home() {
   return (
     <div>
-      <Header />
+      <Start />
       <AboutMe />
-      <Portfolio />
+      <Projects />
       <Contact />
     </div>
   );

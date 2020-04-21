@@ -10,17 +10,17 @@ import { Light as Code } from "react-syntax-highlighter";
 import json from "react-syntax-highlighter/dist/esm/languages/hljs/json";
 import vs2015 from "react-syntax-highlighter/dist/esm/styles/hljs/vs2015";
 
-import cv from "../assets/cv.json";
+import cv from "../../assets/cv.json";
 import beautify from "json-beautify";
 
-import useAboutMeStyles from "../styles/aboutme";
+import useStyles from "./styles";
 
 Code.registerLanguage("json", json);
 
 function AboutMe() {
   const { t } = useTranslation();
 
-  const style = useAboutMeStyles();
+  const style = useStyles();
 
   const yearsPastSince = (birthday: Date) => {
     const now = new Date();

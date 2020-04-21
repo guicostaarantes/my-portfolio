@@ -10,14 +10,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-import useContactStyles from "../styles/contact";
+import useStyles from "./styles";
 
-import ContactForm from "./contactForm";
+import ContactForm from "../contactForm";
 
 function Contact() {
   const { t } = useTranslation();
 
-  const style = useContactStyles();
+  const style = useStyles();
 
   return (
     <div className={style.root}>

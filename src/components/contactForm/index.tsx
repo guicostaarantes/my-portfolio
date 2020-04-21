@@ -7,13 +7,13 @@ import { TextField, Button } from "@material-ui/core";
 
 import Recaptcha from "react-google-recaptcha";
 
-import useContactFormStyles from "../styles/contactForm";
+import useContactFormStyles from "./styles";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 import axios from "axios";
-import config from "../config.json";
+import config from "../../config.json";
 
 function ContactForm(props: WithSnackbarProps) {
   const { enqueueSnackbar } = props;
