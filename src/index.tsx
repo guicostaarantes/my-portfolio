@@ -5,10 +5,8 @@ import Home from "./pages/Home";
 import "./i18n";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <SnackbarProvider maxSnack={3}>
-      <Home />
-    </SnackbarProvider>
-  </React.StrictMode>,
+  <SnackbarProvider maxSnack={3}>
+    <Home />
+  </SnackbarProvider>,
   document.getElementById("root")
 );
